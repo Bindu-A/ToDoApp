@@ -30,7 +30,7 @@ public class LoginController {
             model.put("name", name);
             return "welcome";
         }
-        model.put("errormessage","Invalid credential");
+        model.put("errorMessage","Invalid credential");
         return "login";
     }
 }
