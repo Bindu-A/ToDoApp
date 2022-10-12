@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
+@SessionAttributes("name")
 public class LoginController {
 
     ///login => com.in28minutes.springboot.myfirstwebapp.login.LoginController => login.jsp
