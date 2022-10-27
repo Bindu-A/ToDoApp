@@ -42,5 +42,11 @@ public class TodoController {
         return "redirect:list-todos";
     }
 
+    @RequestMapping("delete-todo")
+    public String deleteToDo(@RequestParam int id) {
+        todoService.deleteById(id);
+        return "redirect:list-todos";
+    }
+
 
 }
