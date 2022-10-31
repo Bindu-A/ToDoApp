@@ -1,12 +1,15 @@
 package com.example.myfirstwebapp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
 //Database (MySQL)
 //Static List of todos => Database (H2, MySQL)
-
+@Entity
 public class Todo {
 
     public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
@@ -18,12 +21,17 @@ public class Todo {
         this.done = done;
     }
 
+    @Id
+    @GeneratedValue
     private int id;
     private String username;
     @Size(min = 6, message = "Enter atleast 6 characters")
     private String description;
     private LocalDate targetDate;
     private boolean done;
+
+    public Todo() {
+    }
 
     public int getId() {
         return id;
