@@ -1,6 +1,5 @@
 package com.example.myfirstwebapp.login;
 
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +16,7 @@ public class WelcomeController {
     }
 
     private String getLoggedInUsername() {
-        return SecurityContextHolder.getContext().getAuthentication().getName();
+        return "bindu";
     }
 
 }
